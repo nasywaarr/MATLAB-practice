@@ -1,4 +1,4 @@
-# 📊 Creating and Working with Vectors (MATLAB)
+# 📊 Creating and Working with Vectors
 
 This project demonstrates how to create and work with vectors in MATLAB, including constructing vectors, generating sequences, and accessing elements.
 
@@ -6,10 +6,10 @@ This project demonstrates how to create and work with vectors in MATLAB, includi
 
 ## 🧮 Constructing a Vector of Data
 
-Create a row vector named `r1` with the following elements:
+Create a row vector named `r1` with the following elements: 1 6 15 28 45 66.
 
 ```
-1 6 15 28 45 66
+r1 = [1 6 15 28 45 66];
 ```
 
 ---
@@ -22,6 +22,10 @@ Create a row vector named `r2` that:
 * Ends at `3600`
 * Has a spacing of `60`
 
+```
+r2 = 0:60:3600;
+```
+
 ---
 
 ## 🔍 Accessing Data in Vectors
@@ -29,7 +33,14 @@ Create a row vector named `r2` that:
 ### Tasks:
 
 * Store the **21st element** of `r2` in a variable called `valA`
+```
+valA = r2(21);
+```
+
 * Store the **last element** of `r1` in a variable called `valB`
+```
+valB = r1(end);
+```
 
 ---
 
