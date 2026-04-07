@@ -7,7 +7,7 @@ A simple MATLAB project demonstrating how to use MATLAB as a calculator to solve
 
 ---
 
-## Calculating the Distance Between Two Points (Pythagorean Theorem)
+## 📐 Case 1 --- Pythagorean Theorem (90°)
 
 Two ships are approaching a lighthouse. We know that the ship at location A is 1200 meters away from the lighthouse at point C, and the ship at location B is 500 meters away from the lighthouse. It is also known that the angle at (ACB) is a right angle (90 degrees). What is the distance between the ships that are at locations A and B?  
 
@@ -43,7 +43,7 @@ Distance between ships: 1300 meters
 
 ------------------------------------------------------------------------
 
-## Calculating the Distance Between Two Points (Law of Cosines)
+## 📏 Case 2 --- Law of Cosines (60°)
 
 Two ships are approaching a lighthouse. We know that the ship at location A is 1200 meters away from the lighthouse at point C, and the ship at location B is 500 meters away from the lighthouse. It is also known that the angle γ is a 60-degree angle. What is the distance between the ships that are at locations A and B?  
 
