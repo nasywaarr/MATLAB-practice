@@ -49,7 +49,7 @@ a = 1200;
 b = 500;
 ```
 
-**Calculate the cosine of angle γ. Store it in the variable `cosGamma`. (Hint: Search the documentation to find a function that computes the cosine of angles expressed in degrees.)**
+**Calculate the cosine of angle γ. Store it in the variable `cosGamma`.**
 
 ```matlab
 cosGamma = cosd(60)
