@@ -34,6 +34,15 @@ c = sqrt(cSq)
 
 ---
 
+### ✅ Results
+
+-   cSq = 1,690,000
+-   c = 1300 m
+
+Distance between ships: 1300 meters
+
+------------------------------------------------------------------------
+
 ## Calculating the Distance Between Two Points (Law of Cosines)
 
 Two ships are approaching a lighthouse. We know that the ship at location A is 1200 meters away from the lighthouse at point C, and the ship at location B is 500 meters away from the lighthouse. It is also known that the angle γ is a 60-degree angle. What is the distance between the ships that are at locations A and B?  
@@ -64,5 +73,21 @@ cSq = a^2 + b^2 - 2*a*b*cosGamma
 ```matlab
 c = sqrt(cSq)
 ```
+### ✅ Results
 
-*Copyright 2025 The MathWorks, Inc.*
+-   cosGamma = 0.5000
+-   cSq = 1,090,000
+-   c = 1044 m
+
+Distance between ships: 1044 meters
+
+------------------------------------------------------------------------
+
+| Scenario | Angle | Formula               | Distance |
+|:--------:|:-----:|-----------------------|:--------:|
+| Case 1   | 90°   | Pythagorean Theorem  | 1300 m   |
+| Case 2   | 60°   | Law of Cosines       | 1044 m   |
+
+------------------------------------------------------------------------
+
+© 2025 The MathWorks, Inc.
