@@ -90,4 +90,4 @@ Distance between ships: 1044 meters
 
 ------------------------------------------------------------------------
 
-© 2025 The MathWorks, Inc.
+*Copyright 2025 The MathWorks, Inc.*
