@@ -1,6 +1,11 @@
 # 🚗 Suspension Analysis Project
 
-This project analyzes experimental suspension data to evaluate **ride quality** using MATLAB. The system simulates a vehicle suspension subjected to sinusoidal motion at different frequencies.
+This project analyzes experimental data to quantify the **ride quality** of a car suspension using MATLAB. The system simulates a vehicle suspension subjected to sinusoidal motion at different frequencies.
+
+** markdown
+Ride quality is a term commonly used to describe how comfortable it is to ride in a vehicle.  
+
+<img width="1058" height="550" alt="_b8509dbae4c24e9180071bf92835344f_S1P1" src="https://github.com/user-attachments/assets/48a8a004-7609-4d0d-9e86-7a53c1153ff4" />
 
 ---
 
@@ -12,168 +17,35 @@ The experiment runs for 30 seconds:
 - **10–20 s:** No motion
 - **20–30 s:** High-frequency motion (5 Hz)
 
-Sensors record:
-- Position (voltage → displacement)
-- Acceleration (voltage → G-force)
+![_c8bf3759ca6e4da18662a7771748c42d_S1P2](https://github.com/user-attachments/assets/c644438c-3f4a-4a4c-8226-86c1c95520d3)
+
+![_5ee06eaca3804c37bdc8ac5a80532840_S1P3](https://github.com/user-attachments/assets/44765e27-73d0-4277-b39e-cfb136aaab03)
 
 ---
 
-## 🧪 Task 1: Import & Visualize Raw Data
+## 🧪 Task 1: Import and Visualize the Raw Experimental Data
 
 ### 📥 Load Data
 
 ```matlab
-load('suspensionData.mat')
+load('suspensionDataVolts.csv')
 ````
 
-### ⏱ Sampling Period
+---
 
-```matlab
-Ts = time(2) - time(1)
-```
-
-### 📊 Plot Raw Signals
-
-```matlab
-figure
-plot(time, Vpos, 'b', time, Vacc, 'r')
-xlabel('Time (s)')
-ylabel('Voltage (V)')
-legend('Position Voltage', 'Acceleration Voltage')
-title('Raw Sensor Data')
-grid on
-```
+## 🛠 Task 2: Prepare the Experimental Data for Analysis
 
 ---
 
-## 🛠 Task 2: Data Preparation
-
-### 🔄 Convert Voltage to Physical Values
-
-```matlab
-pos = 3.00 * (Vpos - 0.5);     % cm
-acc = 5.09 * (Vacc - 0.1);     % G
-```
-
-### ✂️ Extract Test Segments
-
-```matlab
-posLow = pos(1:2001);
-posHigh = pos(4001:6001);
-
-accLow = acc(1:2001);
-accHigh = acc(4001:6001);
-```
-
-### ⏱ Create Test Time Vector
-
-```matlab
-testTime = (0:length(posLow)-1)' * Ts;
-```
-
-### 📊 Plot Position Comparison
-
-```matlab
-figure
-plot(testTime, posLow, 'b', testTime, posHigh, 'r')
-xlabel('Time (s)')
-ylabel('Position (cm)')
-legend('Low Frequency (0.5 Hz)', 'High Frequency (5 Hz)')
-title('Position Comparison')
-grid on
-```
-
-### 📊 Plot Acceleration Comparison
-
-```matlab
-figure
-plot(testTime, accLow, 'b', testTime, accHigh, 'r')
-xlabel('Time (s)')
-ylabel('Acceleration (G)')
-legend('Low Frequency (0.5 Hz)', 'High Frequency (5 Hz)')
-title('Acceleration Comparison')
-grid on
-```
+## 📈 Task 3: Analyze the Data
 
 ---
 
-## 📈 Task 3: Data Analysis
+## 🧠 Task 4: Draw Conclusions and Share
 
-### 📐 RMS Calculation
-
-```matlab
-posLowRMS = sqrt(mean(posLow.^2));
-posHighRMS = sqrt(mean(posHigh.^2));
-
-accLowRMS = sqrt(mean(accLow.^2));
-accHighRMS = sqrt(mean(accHigh.^2));
-```
-
-### 📦 Combine Results
-
-```matlab
-testFreq = [0.5 5];
-
-posRMS = [posLowRMS posHighRMS];
-accRMS = [accLowRMS accHighRMS];
-```
-
-### 📊 RMS Visualization
-
-```matlab
-figure
-plot(testFreq, posRMS, '-o')
-hold on
-plot(testFreq, accRMS, '-s')
-xlabel('Frequency (Hz)')
-ylabel('RMS Value')
-legend('Position RMS', 'Acceleration RMS')
-title('RMS vs Frequency')
-grid on
-```
-
----
-
-## 🧠 Task 4: Conclusions
-
-### 🚗 Ride Quality Interpretation
-
-* **Low-frequency motion (0.5 Hz):**
-
-  * Produces smoother and slower oscillations
-  * Generally more comfortable for passengers
-
-* **High-frequency motion (5 Hz):**
-
-  * Produces rapid vibrations
-  * Leads to discomfort and harsher ride quality
-
-### 📊 Key Findings
-
-* RMS values **increase with frequency**, especially for acceleration
-* Acceleration is more sensitive to ride discomfort than position
-* High-frequency motion significantly worsens ride quality
 
 ### ✅ Final Conclusion
 
 The suspension system performs better at **low frequencies**, providing a smoother and more comfortable ride. High-frequency vibrations increase acceleration forces, making the ride less comfortable.
-
----
-
-## 🧾 Skills Demonstrated
-
-* Data Import & Preprocessing
-* Signal Analysis
-* MATLAB Visualization
-* Statistical Analysis (RMS)
-* Engineering Interpretation
-
----
-
-## 📁 Files
-
-* `suspensionDataVolts.csv` – Raw dataset
-* `suspensionData.mat` – Saved workspace
-* `suspension_analysis.mlx` – Live script with full analysis
 
 ---
