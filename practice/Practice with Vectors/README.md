@@ -3,9 +3,9 @@
 ## 🧮 Creating Vectors
 
 There are many ways to create vectors in MATLAB:
-- Create vectors using concatenation.
-- Create vectors with a set spacing.
-- Create vectors with a set number of elements.
+- Create vectors using **concatenation**
+- Create vectors using the **colon operator** for set spacing
+- Create vectors using **linspace** for a set number of elements
 
 ### Concatenation
 
