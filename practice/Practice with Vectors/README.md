@@ -178,14 +178,4 @@ length(peCol)
 
 ---
 
-## ✅ Conclusion
-
-I learned about:
-- **Creating vectors** using concatenation, the colon operator, and `linspace`
-- **Accessing vector elements** using indexing
-- **Manipulating vector data** by assigning new values via indexing
-- **Performing mathematical operations** with vectors using elementwise operators and math functions
-- **Converting** between row and column vectors using the transpose operator
-- **Getting a vector's dimensions** using `size` and `length`
-
 *Copyright 2025 The MathWorks, Inc.*
