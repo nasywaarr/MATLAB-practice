@@ -2,7 +2,7 @@
 
 ## 🧮 Creating Vectors
 
-There are many ways to create vectors. Such as:
+There are many ways to create vectors in MATLAB:
 - Create vectors using concatenation.
 - Create vectors with a set spacing.
 - Create vectors with a set number of elements.
